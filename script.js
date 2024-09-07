@@ -192,15 +192,43 @@ else{
 // ---------- DO WHILE LOOP -----------
 // Validating a coupon code that gives a discount 
 // Only if customer enter the correct coupon code PIZZA50
-let couponCode = "PIZZA50";
-let customerCoupon = "";
-do{
-    //Ask customer for a coupon input 
-    customerCoupon = prompt("Please enter your coupon code?").toUpperCase();
-    // !== is not equals to, its opposite to ===
-    if(customerCoupon !== couponCode){
-        console.log("Invalid coupon code. Please try agian!");
-    }
-} while(customerCoupon !== couponCode);
+// let couponCode = "PIZZA50";
+// let customerCoupon = "";
+// do{
+//     //Ask customer for a coupon input 
+//     customerCoupon = prompt("Please enter your coupon code?").toUpperCase();
+//     // !== is not equals to, its opposite to ===
+//     if(customerCoupon !== couponCode){
+//         console.log("Invalid coupon code. Please try agian!");
+//     }
+// } while(customerCoupon !== couponCode);
 
-console.log("Congratulations! You've availed the discount");
+// console.log("Congratulations! You've availed the discount");
+
+
+// ------------- FUNCTIONS ---------------
+// A function to display a customer announcement 30mins before the store is closed
+
+// Function Definition
+// function displayMessage(){
+//     console.log("Attention: The store will be closing in 30mins");
+// }
+
+// // Function Calling
+// displayMessage();
+// displayMessage();
+// displayMessage();
+
+// -------------- FUNCTION WITH 1 ARGUMENT -------------
+//Passing 1 argument to the function
+let ownerName = "Traci";
+
+// A function to welcome to the customers to our pizza store
+
+// A function with 1 parameter
+function greetCustomer(owner){
+    // Welcome to Traci's pizza store 
+    console.log("Welcome to " + owner + " pizza store");
+}
+
+greetCustomer(ownerName);
