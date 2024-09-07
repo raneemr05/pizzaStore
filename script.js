@@ -1,4 +1,3 @@
-
 /*
 
 // // Displaying a message
@@ -82,8 +81,8 @@ else{
 */
 
 // 2. Usage if elseif and else
-// Try these with 3 city names, one city same as if statement 
-// other city same as in else if 
+// Try these with 3 city names, one city same as if statement
+// other city same as in else if
 // let deliveryLocation = "London"; // Change the location to some other city
 
 // if(deliveryLocation === "London")
@@ -96,7 +95,6 @@ else{
 // else{
 //     console.log("Sorry we don't deliver to your area");
 // }
-
 
 // let pizzaSize="small";
 // if(pizzaSize==="small"){
@@ -115,27 +113,94 @@ else{
 //     console.log("Invalid pizza size")
 // }
 
-
 // --- SWITCH CASE EXAMPLE ----
 // Checking the pizza size and price using switch case
 // I want to get the input from user --> Which pizza size you want to order?
 //let pizzaSize="Small"; // hard-code value --> instead you use prompt to make it dynamic
-let pizzaSize = prompt("Which size do you want to order?").toLowerCase(); // Take the input of size from user
-switch(pizzaSize){
-    case "small":
-        console.log("The price of small pizza is $4");
-        break;
+// let pizzaSize = prompt("Which size do you want to order?").toLowerCase(); // Take the input of size from user
+// switch(pizzaSize){
+//     case "small":
+//         console.log("The price of small pizza is $4");
+//         break;
 
-    case "medium":
-        console.log("The price of medium pizza is $8");
-        break;
+//     case "medium":
+//         console.log("The price of medium pizza is $8");
+//         break;
 
-    case "large":
-        console.log("The price of large pizza is $10");
-        break;
+//     case "large":
+//         console.log("The price of large pizza is $10");
+//         break;
 
-    default:
-        console.log("Invalid size! Please choose the correct size");
-}
+//     default:
+//         console.log("Invalid size! Please choose the correct size");
+// }
+
+// ----------- OBJECTS ------
+// using object to store the order details of a customer
+// let orderDetails = {
+//   customerName: "Olaf",
+//   pizzaSize: "Large",
+//   quantity: 2,
+//   totalPrice: 30,
+//   isDelivery: true,
+//   toppings: ''
+// };
+
+// console.log(orderDetails);
+// // Accessing the object values using DOT notation
+// console.log("Customer Name: " + orderDetails.customerName);
+// console.log("Pizza Size: " + orderDetails.pizzaSize);
+
+// // Update the values of a key
+// // Using [] brackets
+// orderDetails['pizzaSize'] = "Small"; 
+// // OR using DOT notation
+// orderDetails.pizzaSize = "Small";
+
+// console.log("Pizza Size: " + orderDetails.pizzaSize);
+// console.log("Quantity: " + orderDetails.quantity);
+// console.log("Total Price: " + orderDetails.totalPrice);
+// console.log("Want delivery? " + orderDetails.isDelivery);
 
 
+// ----- LOOPS ---
+// 1. For Loop
+// for(let i=1; i<=10; i++){
+//     // i is the local variable only used in the loop
+//     console.log(i + " Thank you for placing the order");
+// }
+
+// Print even numbers from 10 to 1
+// for(let i=10; i>0; i--){
+//     if(i % 2 !== 0){
+//         console.log(i + " is odd number");
+//     }
+// }
+
+// ----- WHILE LOOP ----
+
+// Counting down until the pizza is ready -> 10
+
+// let minuteleft = 10; // Initialisation
+// // Setting the condition of the loop
+// while(minuteleft > 0){
+//     console.log("Pizze will be ready in " + minuteleft + " minutes");
+//     minuteleft--; // Decrement operator for our countdown
+// }
+// console.log("Your pizza is ready");
+
+// ---------- DO WHILE LOOP -----------
+// Validating a coupon code that gives a discount 
+// Only if customer enter the correct coupon code PIZZA50
+let couponCode = "PIZZA50";
+let customerCoupon = "";
+do{
+    //Ask customer for a coupon input 
+    customerCoupon = prompt("Please enter your coupon code?").toUpperCase();
+    // !== is not equals to, its opposite to ===
+    if(customerCoupon !== couponCode){
+        console.log("Invalid coupon code. Please try agian!");
+    }
+} while(customerCoupon !== couponCode);
+
+console.log("Congratulations! You've availed the discount");
