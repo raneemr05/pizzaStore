@@ -209,9 +209,9 @@ else{
 // ------------- FUNCTIONS ---------------
 // A function to display a customer announcement 30mins before the store is closed
 
-// Function Definition
+// // Function Definition
 // function displayMessage(){
-//     console.log("Attention: The store will be closing in 30mins");
+//     alert("Attention: The store will be closing in 30mins");
 // }
 
 // // Function Calling
@@ -221,14 +221,48 @@ else{
 
 // -------------- FUNCTION WITH 1 ARGUMENT -------------
 //Passing 1 argument to the function
-let ownerName = "Traci";
+//let ownerName = "Traci";
 
 // A function to welcome to the customers to our pizza store
 
-// A function with 1 parameter
-function greetCustomer(owner){
-    // Welcome to Traci's pizza store 
-    console.log("Welcome to " + owner + " pizza store");
-}
+// // A function with 2 parameters
+// // here the parameters are the local variables
+// function greetCustomer(owner, city){
+//     // Welcome to Traci's pizza store 
+//     console.log("Welcome to " + owner + " pizza store " + " in" + city);
+// }
 
-greetCustomer(ownerName);
+// // Calling function with 2 arguments
+// // Order of the arguments needs to be considered when passing the values
+// greetCustomer("London", "Raneem");
+// // Calling function with 1 argument
+// greetCustomer("Valeria");
+// greetCustomer("Tim");
+
+
+
+// ------------------ ***** WEEK 4 DAY 1 ***** ------------
+
+// A function with a return value
+function sum(num1, num2){
+    let result = num1 + num2;
+    console.log(typeof(result));
+    return result;
+}
+// Calling the sum function with a return value
+// 1st Approach
+// Saving it in a variable 
+// Using prompt to take user input
+// to convert the type to a number parseInt is used 
+let num1 = parseInt(prompt("Enter number 1: ")); // 10
+let num2 = parseInt(prompt("Enter number 2: ")); // 4
+console.log(typeof(num1));
+console.log(typeof(num2));
+let answer = sum(num1, num2); 
+console.log("The answer of the sum is: " + answer);
+// 2nd Approach: Surrounding the function calling in console.log()
+// console.log(sum(20,32));
+
+// Function for all 4 Arithmetic Operations it will be +,- ,*, /
+
+
