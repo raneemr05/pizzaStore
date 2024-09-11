@@ -1,4 +1,3 @@
-/*
 
 // // Displaying a message
 // // 1. Using alert
@@ -37,6 +36,9 @@
 // // console.log("It was founded in " + foundedYear + " year")
 // // //foundedYear = "2005";
 // // console.log(foundedYear + 5) // + is doing the calculation
+// // Function Calling
+
+// displayMessage();
 
 // // //Boolean - true or false
 // let isOpen = true;
@@ -62,39 +64,38 @@
 // // String to Int --> "5" convert it to 5
 // // parseInt(myNumber)
 // // Convert a value to a string --> toString()
-*/
 // // ------- Conditionals --------
 
-/*
+
 // 1. Usage if and if-else
-let isOpen = true;  // --> Change this true to false then check the result
-let isDeliveryAvailable = true;
+// let isOpen = true;  // --> Change this true to false then check the result
+// let isDeliveryAvailable = true;
 
-// Use if statement to print the store opening message
-if (isOpen === true && isDeliveryAvailable === true){
-    console.log("The store is open and delivery is available");
-    console.log("You are welcome to visit us or order online!");
-}
-else{
-    console.log("The store is closed");
-}
-*/
-
-// 2. Usage if elseif and else
-// Try these with 3 city names, one city same as if statement
-// other city same as in else if
-// let deliveryLocation = "London"; // Change the location to some other city
-
-// if(deliveryLocation === "London")
-// {
-//     console.log("Delivery is available to London. Feel free to place your order");
-// }
-// else if(deliveryLocation ==="Leeds"){
-//     console.log("Delivery is available to Leeds")
+// // Use if statement to print the store opening message
+// if (isOpen === true && isDeliveryAvailable === true){
+//     console.log("The store is open and delivery is available");
+//     console.log("You are welcome to visit us or order online!");
 // }
 // else{
-//     console.log("Sorry we don't deliver to your area");
+//     console.log("The store is closed");
 // }
+// */
+
+// // 2. Usage if elseif and else
+// // Try these with 3 city names, one city same as if statement
+// // other city same as in else if
+// // let deliveryLocation = "London"; // Change the location to some other city
+
+// // if(deliveryLocation === "London")
+// // {
+// //     console.log("Delivery is available to London. Feel free to place your order");
+// // }
+// // else if(deliveryLocation ==="Leeds"){
+// //     console.log("Delivery is available to Leeds")
+// // }
+// // else{
+// //     console.log("Sorry we don't deliver to your area");
+// // }
 
 // let pizzaSize="small";
 // if(pizzaSize==="small"){
@@ -214,8 +215,10 @@ else{
 //     alert("Attention: The store will be closing in 30mins");
 // }
 
-// // Function Calling
-// displayMessage();
+// let displayMessageArrow = () => alert("Attention I am a message in an arrow function");
+
+// displayMessageArrow();
+
 // displayMessage();
 // displayMessage();
 
@@ -244,25 +247,70 @@ else{
 // ------------------ ***** WEEK 4 DAY 1 ***** ------------
 
 // A function with a return value
-function sum(num1, num2){
-    let result = num1 + num2;
-    console.log(typeof(result));
-    return result;
-}
+// function sum(num1, num2){
+//     let result = num1 + num2;
+//     console.log(typeof(result));
+//     return result;
+// }
 // Calling the sum function with a return value
 // 1st Approach
 // Saving it in a variable 
 // Using prompt to take user input
-// to convert the type to a number parseInt is used 
-let num1 = parseInt(prompt("Enter number 1: ")); // 10
-let num2 = parseInt(prompt("Enter number 2: ")); // 4
-console.log(typeof(num1));
-console.log(typeof(num2));
-let answer = sum(num1, num2); 
-console.log("The answer of the sum is: " + answer);
+// to parse the value to a number parseInt is used 
+// let num1 = parseInt(prompt("Enter number 1: ")); // 10
+// let num2 = parseInt(prompt("Enter number 2: ")); // 4
+// console.log(typeof(num1));
+// console.log(typeof(num2));
+// let answer = sum(num1, num2); 
+// console.log("The answer of the sum is: " + answer);
+
 // 2nd Approach: Surrounding the function calling in console.log()
 // console.log(sum(20,32));
 
 // Function for all 4 Arithmetic Operations it will be +,- ,*, /
 
+// ------ FUNCTION EXPRESSION -----
+// A function to calculate the total price 
+// based on the quantity  and price per pizza
 
+// 1. Using FUNCTION DECLARATION style
+// let total = calculateTotal(3, 10);
+// console.log("Total price using function declaration: " + total);
+
+// function calculateTotal(quantity, pricePerPizza){
+//     return quantity * pricePerPizza;
+// }
+
+// // 2. Using FUNCTION EXPRESSION style
+// let calculateTotalPrice = function(quantity, pricePerPizza){
+//     return quantity * pricePerPizza;
+// }
+// let total_expression = calculateTotalPrice(3, 10);
+// console.log("Total price using function expression: " + total_expression);
+
+// 3. Using ARROW FUNCTION, alternative of function expression
+// No hoisting 
+// modern way, shorter syntax, after ES6
+// let variableName = () => {.......}
+
+// Function defined
+// Function is stored in a variable and it has no name / anonymous
+// If there are no parameters then still you should have empty ()
+let calculateTotalPriceUsingArrow = (quantity, pricePerPizza) => quantity * pricePerPizza
+
+// //Calling the function
+// let totalArrow = calculateTotalPriceUsingArrow(3,10);
+// console.log("Total price using arrow function is: " + totalArrow);
+
+// 4. Anonymous Function 
+// It has no name / unnamed function 
+// used as callbacks or inline
+let totalPriceAnonymous = (function(quantity, pricePerpizza){
+    return quantity * pricePerpizza;
+}) (3, 10);  // Immediately passed arguments
+
+let variableName = (function(param1, param2){
+
+})(argument1, argument2);
+
+console.log("Total price using anonymous function: " + totalPriceAnonymous);
