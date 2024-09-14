@@ -65,7 +65,27 @@ else{
     console.log("No such element exist");
 }
 
+// let fruits = ['🍓','🍌','🥝'];
+// alert(fruits);
 
-let fruits = ['🍓','🍌','🥝'];
-alert(fruits);
+let toppings =['olives','cheese', 'pepperoni','mushroom','salami'];
+console.log("Sorted list of toppings");
+console.log(toppings.sort());
 
+toppings.reverse();
+console.log("Reversed list of toppings");
+console.log(toppings);
+
+// Numeric Array
+let priceList = [15, 10, 8, 2, 150]; // Increase the price by 2
+// In sort, write a compare function as a parameter 
+let sortedArray = price.sort((a, b) => a - b);
+console.log(sortedArray); // ASCENDING
+console.log(price.sort((a, b) => b - a)); // DESCENDING
+
+
+// MAP, FILTER AND REDUCE
+
+// Increase the price by 2 using MAP 
+let newPrices = priceList.map(price => price + 2 );
+console.log(newPrices);
