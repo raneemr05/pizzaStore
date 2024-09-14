@@ -2,6 +2,10 @@
 let randomValues = ['A', 55, false, "Javascript"];
 console.log(randomValues);
 
+// Update the value of an element using index number / position
+randomValues[2] = true;
+console.log("After Changing the value at index 2: " + randomValues);
+
 // // Display length using the length property
 // console.log(randomValues.length);
 
@@ -45,3 +49,23 @@ console.log(randomValues);
 // Use splice to insert element at a specific position
 randomValues.splice(2,1,"Coffee");
 console.log(randomValues);
+
+// Check index value of an element 
+// returns the index number if the element exist or -1 if it doesn't exist
+console.log(randomValues.indexOf("Javascript"));
+
+//includes
+console.log(randomValues.includes('Javascript'));
+
+//using includes in conditional
+if(randomValues.includes('Java')){
+    console.log("Javascript is in the list");
+}
+else{
+    console.log("No such element exist");
+}
+
+
+let fruits = ['🍓','🍌','🥝'];
+alert(fruits);
+
