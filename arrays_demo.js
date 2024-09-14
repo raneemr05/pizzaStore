@@ -77,15 +77,30 @@ console.log("Reversed list of toppings");
 console.log(toppings);
 
 // Numeric Array
+// let prices = [15, 10, 8, 2, 150]; // Increase the price by 2
+// // In sort, write a compare function as a parameter 
+// let sortedArray = prices.sort((a, b) => a - b);
+// console.log(sortedArray); // ASCENDING
+// console.log(prices.sort((a, b) => b - a)); // DESCENDING
+
+
 let priceList = [15, 10, 8, 2, 150]; // Increase the price by 2
-// In sort, write a compare function as a parameter 
-let sortedArray = price.sort((a, b) => a - b);
-console.log(sortedArray); // ASCENDING
-console.log(price.sort((a, b) => b - a)); // DESCENDING
-
-
 // MAP, FILTER AND REDUCE
-
 // Increase the price by 2 using MAP 
 let newPrices = priceList.map(price => price + 2 );
-console.log(newPrices);
+console.log("The Latest Price: ")
+console.log(newPrices.sort((a,b) => a - b));
+console.log("The Original Price: " + priceList);
+// console.log(priceList);
+
+// Using filter() 
+// Filter the toppings which has price > 15
+let expensiveToppings = priceList.filter(price => price >= 15);
+console.log("Toppings which are > 15");
+console.log(expensiveToppings);
+
+
+// Using reduce()
+// Calculate the total cost of all toppings 
+let totalCost = priceList.reduce((total, price) => total + price, 0);
+console.log(totalCost);
